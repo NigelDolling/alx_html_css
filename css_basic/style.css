@@ -1,0 +1,67 @@
+/* Reset basic spacing and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Flex layout for full-page structure */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and footer styling */
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+/* Navigation styling */
+header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main layout: side-by-side article and aside */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    min-height: 0; /* Important for overflow to work properly */
+    overflow: hidden;
+}
+
+
+
+article {
+    flex: 2;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    min-height: 0;
+}
+
+aside {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #e0e0e0;
+    min-height: 0;
+}
+
+footer {
+    text-align: center;
+}
