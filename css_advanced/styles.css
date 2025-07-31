@@ -289,8 +289,6 @@ main section:nth-child(3) > div > div {
     flex: 1;
     background: white;
     border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(7, 22, 41, 0.178458);
-    overflow: hidden;
     max-width: 255px;
     position: relative;
 }
@@ -317,6 +315,7 @@ main section:nth-child(3) > div > div > .play-button {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 1;
 }
 
 main section:nth-child(3) > div > div > .play-button::after {
@@ -329,118 +328,10 @@ main section:nth-child(3) > div > div > .play-button::after {
     margin-left: 3px;
 }
 
-/* Tutorials container */
-main section:nth-child(3) > div {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 30px;
-    padding: 0 20px;
-    justify-content: center;
-}
-
-/* Individual tutorial card */
-main section:nth-child(3) > div > div {
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(7, 22, 41, 0.178458);
-    overflow: hidden;
-    width: 255px;
-    position: relative;
-}
-
-/* Tutorial preview image container */
-main section:nth-child(3) > div > div > div:first-child {
-    position: relative;
-    width: 100%;
-    height: 154px;
-}
-
-main section:nth-child(3) > div > div > div:first-child img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Play button overlay */
-main section:nth-child(3) > div > div > div:first-child > .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 64px;
-    height: 64px;
-    background: rgba(255, 255, 255, 0.86);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-main section:nth-child(3) > div > div > div:first-child > .play-button::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 12px solid #C271FF;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    margin-left: 3px;
-}
-
-/* Tutorial card content */
-main section:nth-child(3) > div > div > div:nth-child(2) {
-    padding: 20px 13px;
-}
-
-/* Tutorial title */
-main section:nth-child(3) > div > div h3 {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #071629;
-    margin-bottom: 10px;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-}
-
-/* Tutorial description */
-main section:nth-child(3) > div > div p:first-of-type {
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(7, 22, 41, 0.501584);
-    margin-bottom: 15px;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-}
-
-/* Instructor info container */
-main section:nth-child(3) > div > div > div:nth-child(2) > div:first-child {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-/* Instructor avatar */
-main section:nth-child(3) > div > div > div:nth-child(2) > div:first-child img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Instructor name */
-main section:nth-child(3) > div > div > div:nth-child(2) > div:first-child h4 {
-    font-size: 14px;
-    line-height: 27px;
-    font-weight: 600;
-    color: #C271FF;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-}
-
 /* Rating and duration container */
 main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
 }
 
@@ -453,7 +344,7 @@ main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > di
 /* Star rating */
 main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > div i {
     color: #C271FF;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > div i.empty {
@@ -462,13 +353,12 @@ main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > di
 
 /* Duration */
 main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) p {
-    font-size: 14px;
-    line-height: 27px;
+    font-size: 12px;
+    line-height: 24px;
     font-weight: 600;
     color: #C271FF;
     font-family: 'Source Sans Pro', Arial, sans-serif;
 }
-
 
 
 /* Free Membership Section */
