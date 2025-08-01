@@ -194,7 +194,7 @@ main section:first-child > div:nth-child(2) > div > div p {
 /* Testimonial Section */
 main section:nth-child(2) {
     background: #C271FF;
-    padding: 100px 0;
+    padding: 60px 0;
     color: white;
 }
 
@@ -205,15 +205,21 @@ main section:nth-child(2) > div {
     align-items: center;
     gap: 50px;
     padding: 0 30px;
-    flex-direction: row;
+}
+
+main section:nth-child(2) > div > div {
+    display: flex;
+    flex-direction: row; /* Add this line */
+    align-items: center;
+    gap: 50px;
 }
 
 /* Testimonial avatar */
-main section:nth-child(2) > div > div:first-child {
-    flex-shrink: 0;
+main section:nth-child(2) > div > div > div:first-child {
+    flex-basis: 150px;
 }
 
-main section:nth-child(2) > div > div:first-child img {
+main section:nth-child(2) > div > div > div:first-child img {
     width: 100px;
     height: 100px;
     border-radius: 20%;
@@ -222,7 +228,7 @@ main section:nth-child(2) > div > div:first-child img {
 }
 
 /* Testimonial text content */
-main section:nth-child(2) > div > div:nth-child(2) {
+main section:nth-child(2) > div > div > div:nth-child(2) {
     flex: 1;
 }
 
@@ -233,7 +239,6 @@ main section:nth-child(2) blockquote {
     font-weight: 400;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     quotes: none;
-    flex: 1;
 }
 
 main section:nth-child(2) h3 {
@@ -242,7 +247,6 @@ main section:nth-child(2) h3 {
     margin-bottom: 5px;
     font-weight: 500;
     font-family: 'Source Sans Pro', Arial, sans-serif;
-    flex: 2;
 }
 
 main section:nth-child(2) p {
@@ -251,13 +255,13 @@ main section:nth-child(2) p {
     font-style: italic;
     font-weight: 400;
     font-family: 'Source Sans Pro', Arial, sans-serif;
-    flex-direction: column;
 }
 
 /* Most Popular Tutorials Section */
 main section:nth-child(3) {
     background: white;
-    padding: 80px 0;
+    padding: 10px 0;
+    margin-bottom: 40px;
 }
 
 main section:nth-child(3) h2 {
@@ -266,12 +270,14 @@ main section:nth-child(3) h2 {
     font-weight: 300;
     color: #071629;
     text-align: center;
+    margin-top: 0;
     margin-bottom: 80px;
     font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 main section:nth-child(3) h2 .purple-text {
     color: #C271FF;
+    font-weight: 700;
 }
 
 /* Tutorials container */
@@ -301,21 +307,31 @@ main section:nth-child(3) > div > div > img:first-child {
     position: relative;
 }
 
+main section:nth-child(3) > div > div > p:nth-child(3) {
+    font-size: 14px; 
+    line-height: 24px; 
+    color: #666; 
+     margin-bottom: 20px;
+}
+
 /* Play button overlay */
 main section:nth-child(3) > div > div > .play-button {
     position: absolute;
-    top: 77px;
+    transform: translate(-50%, -50%);
+    top: 16%;
     left: 50%;
     transform: translateX(-50%);
     width: 64px;
     height: 64px;
     background: rgba(255, 255, 255, 0.86);
     border-radius: 50%;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 1;
+    /*z-index: 1;*/
+    box-shadow: 0 0 0 0px #ffffff;
 }
 
 main section:nth-child(3) > div > div > .play-button::after {
@@ -328,36 +344,53 @@ main section:nth-child(3) > div > div > .play-button::after {
     margin-left: 3px;
 }
 
+/* Tutor information */
+.tutor-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tutor-image {
+  width: 45px; 
+  height: 45px; 
+  margin-right: 20px; 
+}
+
+.tutor-name {
+  color: #C271FF; /* purple color */
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
 /* Rating and duration container */
-main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Star rating container */
-main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > div {
-    display: flex;
-    gap: 8px;
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Star rating */
-main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > div i {
-    color: #C271FF;
-    font-size: 12px;
+.rating div:nth-child(-n+4) i {
+  color: #C271FF; /* purple color */
 }
 
-main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) > div i.empty {
-    color: #D8D8D8;
+.rating div:nth-child(n+5) i {
+  color: #D8D8D8; /* gray color */
 }
 
 /* Duration */
-main section:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) p {
-    font-size: 12px;
-    line-height: 24px;
-    font-weight: 600;
-    color: #C271FF;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
+.duration {
+  color: #C271FF; /* purple color */
+  margin-left: 8px;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 
@@ -406,30 +439,30 @@ main section:nth-child(4) > div > div {
 }
 
 /* Smile icon */
-main section:nth-child(4) .smile-icon {
+main section:nth-child(4) > div > div > img {
     font-size: 48px;
     color: #C271FF;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     line-height: 1;
     display: block;
 }
 
 /* Benefit title */
-main section:nth-child(4) h3 {
+main section:nth-child(4) > div > div > h3 {
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* Benefit description */
-main section:nth-child(4) p {
-    font-size: 14px;
+main section:nth-child(4) > div > p {
+    font-size: 10px;
     line-height: 26px;
-    color: white;
-    font-weight: 400;
+    color: gray;
+    font-weight: 100;
     font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
@@ -457,7 +490,7 @@ main section:nth-child(4) > button:hover {
 /* FAQ Section */
 main section:nth-child(5) {
     background: white;
-    padding: 80px 0;
+    padding: 50px 0;
     color: #071629;
 }
 
@@ -466,7 +499,7 @@ main section:nth-child(5) h2 {
     line-height: 75px;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     color: #071629;
 }
@@ -478,8 +511,9 @@ main section:nth-child(5) > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 60px 80px;
-    padding: 0 40px;
+    gap: 30px 40px;
+    padding: 0 10px;
+    margin-bottom: 0;
 }
 
 /* Individual FAQ item */
@@ -488,21 +522,22 @@ main section:nth-child(5) > div > div {
 }
 
 /* FAQ question */
-main section:nth-child(5) h3 {
+main section:nth-child(5)  h3 {
     font-size: 16px;
     line-height: 30px;
     font-weight: 700;
     color: #071629;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 /* FAQ answer */
-main section:nth-child(5) p {
+main section:nth-child(5) > div > div > div {
     font-size: 14px;
     line-height: 24px;
     color: rgba(7, 22, 41, 0.501584);
     font-weight: 400;
+    margin-bottom: 20px;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     text-align: left;
 }
@@ -510,7 +545,7 @@ main section:nth-child(5) p {
 /* Footer */
 footer {
     background: #071629;
-    padding: 60px 0 40px;
+    padding: 40px 0 20px;
     color: white;
 }
 
