@@ -1,0 +1,357 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-left: auto;
+}
+
+nav img {
+    height: 40px;
+    width: auto;
+    flex-shrink: 0;
+    margin-right: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+    color: tomato;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(41, 48, 59, 0.4), rgba(24, 29, 36, 0.6)),
+                url('./images/headphones_hero_1.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px 40px 20px;
+}
+
+/* Hero content - first div */
+.hero-content {
+    max-width: 750px;
+    margin-top: 300px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 5px;
+}
+
+/* Subtitle styling */
+.hero .subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* Call to action button */
+.cta-button {
+    /*display: inline-block;*/
+    background: linear-gradient(135deg, #ff6565, #ff6565);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin-bottom: 70px;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(194, 113, 255, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(194, 113, 255, 0.4);
+}
+
+/* Paragraph styling */
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-wrap: break-word; 
+    margin-bottom: 40px;
+}
+
+/* What We Do Section */
+.what-we-do {
+    padding: 110px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+
+
+.wwd-content {
+    max-width: 750px;
+    margin: 0 auto 100px auto;
+}
+
+.wwd-content h2 {
+    font-size: 45px;
+    line-height: 75px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 80px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    color: #071629;
+}
+
+.wwd-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #071629;
+    margin-bottom: 0;
+}
+
+/* Services Grid */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-item {
+    flex: 1;
+    max-width: 200px;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* Icon Styling */
+.service-item span {
+    font-size: 94px;
+    color: #ff6565;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.service-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #071629;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.service-item p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #071629;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .service-item {
+        max-width: 300px;
+    }
+    
+    .service-item span {
+        font-size: 80px;
+    }
+}
+
+/* Our results */
+.our-results {
+    padding: 110px 20px;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(41, 48, 59, 0.4), rgba(24, 29, 36, 0.6)),
+                url('./images/headphones_hero_2.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.our-results-content {
+    max-width: 750px;
+    margin: 0 auto 100px auto;
+}
+
+.our-results-content h2 {
+    font-size: 45px;
+    line-height: 75px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 80px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    color: white;
+}
+
+.our-results-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 0;
+}
+
+/* Pentagon Results Grid */
+.our-results-images {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-item {
+    text-align: center;
+    position: relative;
+}
+
+.result-item img {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+}
+
+.result-stat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+.result-stat .percentage {
+    font-size: 46px;
+    line-height: 1;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.result-stat .description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 120px;
+}
+
+/* Responsive Design for Results */
+@media (max-width: 768px) {
+    .our-results-images {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .result-item img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .result-stat .percentage {
+        font-size: 36px;
+    }
+}
+
+.contact {
+    padding: 110px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto 100px auto;
+}
+
+.contact-content h2 {
+    font-size: 45px;
+    line-height: 75px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 80px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    color: #071629;
+}
+
+.contact-content input, .contact-content textarea {
+    width: 80%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #071629;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #071629;
+    background: transparent;
+    outline: none;
+}
+
+.contact-content input:focus, .contact-content textarea:focus {
+    border-bottom: 2px solid #ff6565;
+}
+
+
+

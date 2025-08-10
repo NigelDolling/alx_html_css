@@ -1,0 +1,132 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-left: auto;
+}
+
+nav img {
+    height: 40px;
+    width: auto;
+    flex-shrink: 0;
+    margin-right: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+    color: tomato;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(41, 48, 59, 0.4), rgba(24, 29, 36, 0.6)),
+                url('./images/headphones_hero_1.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px 40px 20px;
+}
+
+/* Hero content - first div */
+.hero-content {
+    max-width: 750px;
+    margin-top: 300px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 5px;
+}
+
+/* Subtitle styling */
+.hero .subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* Call to action button */
+.cta-button {
+    /*display: inline-block;*/
+    background: linear-gradient(135deg, #ff6565, #ff6565);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin-bottom: 70px;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(194, 113, 255, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(194, 113, 255, 0.4);
+}
+
+/* Paragraph styling */
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-wrap: break-word; 
+    margin-bottom: 40px;
+}
+
+
+
+
+
